@@ -21,3 +21,14 @@ The micropython code [mlic_ringlight.py](mlic_ringlight.py) is developed to be u
 ## Processing
 For processing of the MLICs the GUI or command line version of [Relight](https://github.com/cnr-isti-vclab/relight) can be used. For combining MLIC capturing with focus stacking, the command line version can be called from a Bash or Python script.
 
+## Normal map transformations
+After having produced a normal map, you may notice that the way how the normals are coded is not desirable. For example you used two different programs to produce the normal maps and one of your normal maps is "flipped". In another case, you may have forgotten to rotate the base images before producing the normal map. Gladly, simple 90 degree step rotations and flips of the normals can be done using basic manipulations of the color channels. These are the operations as [Imagemagick](https://imagemagick.org/) commands. For this, I looked up the basic transformations from [this](https://robonobodojo.wordpress.com/2015/11/22/transforming-normal-maps/) blog post from Andy Davis ([https://robonobodojo.wordpress.com](https://robonobodojo.wordpress.com)).
+
+| Operation | Command |
+| --- | --- |
+| Horizontal flip | `convert input.png -channel R -negate output.png` |
+| Vertical flip | `convert input.png -channel G -negate output.png` |
+| Clockwise 90 degree rotation | `convert input.png -separate -swap 0,1 -combine -channel R -negate output.png` |
+| Counter clockwise 90 degree rotation| `convert input.png -separate -swap 0,1 -combine -channel G -negate output.png` |
+| 180 degree rotation | `convert input.png -channel R -negate -channel G -negate output.png` |
+
