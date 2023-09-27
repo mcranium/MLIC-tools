@@ -1,7 +1,7 @@
 # MLIC-tools
 
 ## Overview
-This repository should provide tools that can be used for capturing and processing Multi Light Image Collections (MLICs).
+This repository should provide tools that can be used for capturing and processing Multi Light Image Collections (MLICs). My poster, presented at the annual meeting of the Palaeontological Association in Cambridge 2023, provides a graphical overview of the Multi Light Imaging workflow with regards to compression fossils. It is now openly available at Zenodo as a PDF file under the following persistent link [https://doi.org/10.5281/zenodo.8381473](https://doi.org/10.5281/zenodo.8381473).
 
 ## Capturing
 Captuing ideally happens with a fixed lighting setup. This way it is not necessary to image reference spheres for each image collection. The light directions are stored in text files (light point files) – there are different conventions, depending on the software to use.
