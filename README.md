@@ -28,8 +28,9 @@ To also use the dome for constant (somewhat) diffuse illumination I included som
 The wiring-specific Arduino code ([mlic_16_lights_relay_dome.ino](mlic_16_lights_relay_dome.ino)) can be modified to accomodate different camera models and camera settings (e.g. shutter speed) by changing the delay values. Wrongly specified delay values can lead to capturing too few or to many images (camera trigger delay), wrong lighting conditions (camera capturing time window too short) or wasted aquisition time (adds up quickly when combined with focus stacking and panoramic imaging). 
 
 ### 3D printable parts
-- Ring light housing for a Laowa 25 mm 2.5x objective
-- Hot shoe adapter for a Nikon D7200 DSLR
+- [Laowa 25 mm ring light adapter](https://www.thingiverse.com/thing:6205407) for the Laowa 25mm f/2.8 2.5-5X Ultra Macro
+- [Nikon DSLR hot shoe adapter](https://www.thingiverse.com/thing:6205378) to mount a control unit on the camera
+- [16 LED dome light lens mount for Laowa 100mm f/2.8 2x Ultra Macro APO](https://www.thingiverse.com/thing:6412833)
 
 ## Processing
 For processing of the MLICs the GUI or command line version of [Relight](https://github.com/cnr-isti-vclab/relight) can be used. For combining MLIC capturing with focus stacking, the command line version can be called from a Bash or Python script.
