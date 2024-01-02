@@ -25,6 +25,8 @@ To also use the dome for constant (somewhat) diffuse illumination I included som
 
 ![Schematic](simplified_schematic_two_ring_dome.png)
 
+The wiring-specific Arduino code ([mlic_16_lights_relay_dome.ino](mlic_16_lights_relay_dome.ino)) can be modified to accomodate different camera models and camera settings (e.g. shutter speed) by changing the delay values. Wrongly specified delay values can lead to capturing too few or to many images (camera trigger delay), wrong lighting conditions (camera capturing time window too short) or wasted aquisition time (adds up quickly when combined with focus stacking and panoramic imaging). 
+
 ### 3D printable parts
 - Ring light housing for a Laowa 25 mm 2.5x objective
 - Hot shoe adapter for a Nikon D7200 DSLR
